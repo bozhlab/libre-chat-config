@@ -1,0 +1,18 @@
+version: 1.2.4
+
+cache: true
+
+interface:
+  privacyPolicy:
+    externalUrl: 'https://librechat.ai/privacy-policy'
+    openNewTab: true
+  termsOfService:
+    externalUrl: 'https://librechat.ai/tos'
+    openNewTab: true
+
+registration:
+  socialLogins:
+    - "google"
+
+endpoints:
+  custom:
