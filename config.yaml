@@ -14,5 +14,12 @@ registration:
   socialLogins:
     - "google"
 
+mcpServers:
+  nanobanana:
+    command: uvx
+    args:
+      - nanobanana-mcp-server@latest
+    env:
+      GEMINI_API_KEY: "${GOOGLE_KEY}"
+
 endpoints:
-  custom:
