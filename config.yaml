@@ -21,5 +21,3 @@ mcpServers:
       - nanobanana-mcp-server@latest
     env:
       GEMINI_API_KEY: "${GOOGLE_KEY}"
-
-endpoints:
