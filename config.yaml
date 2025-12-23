@@ -21,3 +21,24 @@ mcpServers:
       - nanobanana-mcp-server@latest
     env:
       GEMINI_API_KEY: "${GOOGLE_KEY}"
+
+
+endpoints:
+  custom:
+    - name: 'Portkey'
+      apiKey: '${PORTKEY_API_KEY}'
+      baseURL: 'https://api.portkey.ai/v1'
+      headers:
+        x-portkey-api-key: '${PORTKEY_API_KEY}'
+        x-portkey-config: '${PORTKEY_CONFIG_ID}'
+        x-portkey-metadata: '{"_user":"{{LIBRECHAT_USER_EMAIL}}"}'
+      models:
+        default: ["assistant"]
+        fetch: true
+      titleConvo: true
+      titleModel: 'custom model'
+      summarize: false
+      summaryModel: 'custom model'
+      forcePrompt: false
+      modelDisplayLabel: 'Portkey'
+      iconURL: https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/rjqy7ghvjoiu4cd1xjbf
