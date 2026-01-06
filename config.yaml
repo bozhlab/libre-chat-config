@@ -21,6 +21,12 @@ mcpServers:
       - nanobanana-mcp-server@latest
     env:
       GEMINI_API_KEY: "${GOOGLE_KEY}"
+  filesystem:
+    startup: false
+    command: node
+    args:
+      - /home/node/server-filesystem/dist/index.js
+      - /home/node/nanobanana-images/
 
 
 endpoints:
@@ -45,8 +51,27 @@ endpoints:
         fetch: false
       modelDisplayLabel: 'Models'
       titleConvo: true
-      titleModel: 'Models'
+      titleModel: 'current_model'
       summarize: false
-      summaryModel: 'model'
+      summaryModel: 'current_model'
       forcePrompt: false
       iconURL: https://cdn-icons-png.flaticon.com/512/17653/17653338.png
+    - name: 'Adapter'
+      apiKey: '${PORTKEY_API_KEY}'
+      baseURL: '${ADAPTER_URL}'
+      headers:
+        x-portkey-api-key: '${PORTKEY_API_KEY}'
+        x-portkey-config: '${PORTKEY_CONFIG_ID}'
+        x-portkey-metadata: '{"_user":"{{LIBRECHAT_USER_EMAIL}}"}'
+      models:
+        default:
+          - gemini-2.5-flash-lite
+          - general-purpose
+        fetch: true
+      modelDisplayLabel: 'Models'
+      titleConvo: true
+      titleModel: 'current_model'
+      summarize: false
+      summaryModel: 'current_model'
+      forcePrompt: false
+      iconURL: https://cdn-icons-png.flaticon.com/512/13819/13819669.png
