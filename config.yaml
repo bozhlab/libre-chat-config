@@ -22,10 +22,10 @@ mcpServers:
     env:
       GEMINI_API_KEY: "${GOOGLE_KEY}"
   filesystem:
-    startup: false
-    command: node
+    command: npx
     args:
-      - /home/node/server-filesystem/dist/index.js
+      - -y
+      - "@modelcontextprotocol/server-filesystem"
       - /home/node/nanobanana-images/
 
 
