@@ -27,7 +27,7 @@ mcpServers:
       - -y
       - "@modelcontextprotocol/server-filesystem"
       - /home/node/nanobanana-images/
-      - /home/node/LibreChat/client/public/images/{{LIBRECHAT_USER_ID}}/
+      - /app/client/public/images/{{LIBRECHAT_USER_ID}}/
 
 endpoints:
   custom:
