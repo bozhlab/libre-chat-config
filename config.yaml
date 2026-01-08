@@ -27,7 +27,7 @@ mcpServers:
       - -y
       - "@modelcontextprotocol/server-filesystem"
       - /home/node/nanobanana-images/
-
+      - /home/node/LibreChat/client/public/images/{{LIBRECHAT_USER_ID}}/
 
 endpoints:
   custom:
@@ -50,7 +50,7 @@ endpoints:
           - gpt-5-pro
         fetch: false
       modelDisplayLabel: 'Models'
-      titleConvo: true
+      titleConvo: false
       titleModel: 'current_model'
       summarize: false
       summaryModel: 'current_model'
@@ -69,7 +69,7 @@ endpoints:
           - general-purpose
         fetch: true
       modelDisplayLabel: 'Models'
-      titleConvo: true
+      titleConvo: false
       titleModel: 'current_model'
       summarize: false
       summaryModel: 'current_model'
