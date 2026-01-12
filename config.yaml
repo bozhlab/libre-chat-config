@@ -50,7 +50,7 @@ endpoints:
           - gpt-5-pro
         fetch: false
       modelDisplayLabel: 'Models'
-      titleConvo: false
+      titleConvo: true
       titleModel: 'current_model'
       summarize: false
       summaryModel: 'current_model'
@@ -69,7 +69,7 @@ endpoints:
           - general-purpose
         fetch: true
       modelDisplayLabel: 'Models'
-      titleConvo: false
+      titleConvo: true
       titleModel: 'current_model'
       summarize: false
       summaryModel: 'current_model'
