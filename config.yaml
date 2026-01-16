@@ -30,6 +30,7 @@ mcpServers:
       - /app/client/public/images/
 
 endpoints:
+  custom:
     - name: 'Adapter'
       apiKey: '${PORTKEY_API_KEY}'
       baseURL: '${ADAPTER_URL}'
