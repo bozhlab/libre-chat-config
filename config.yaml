@@ -30,32 +30,6 @@ mcpServers:
       - /app/client/public/images/
 
 endpoints:
-  custom:
-    - name: 'Models'
-      apiKey: '${PORTKEY_API_KEY}'
-      baseURL: 'https://api.portkey.ai/v1'
-      headers:
-        x-portkey-api-key: '${PORTKEY_API_KEY}'
-        x-portkey-config: '${PORTKEY_CONFIG_ID}'
-        x-portkey-metadata: '{"_user":"{{LIBRECHAT_USER_EMAIL}}"}'
-      models:
-        default:
-          - gemini-2.5-flash-lite
-          - gemini-2.5-flash
-          - gemini-2.5-pro
-          - gemini-3-pro
-          - gpt-5
-          - gpt-5-nano
-          - gpt-5-mini
-          - gpt-5-pro
-        fetch: false
-      modelDisplayLabel: 'Models'
-      titleConvo: true
-      titleModel: 'current_model'
-      summarize: false
-      summaryModel: 'current_model'
-      forcePrompt: false
-      iconURL: https://cdn-icons-png.flaticon.com/512/17653/17653338.png
     - name: 'Adapter'
       apiKey: '${PORTKEY_API_KEY}'
       baseURL: '${ADAPTER_URL}'
@@ -75,3 +49,9 @@ endpoints:
       summaryModel: 'current_model'
       forcePrompt: false
       iconURL: https://cdn-icons-png.flaticon.com/512/13819/13819669.png
+      addParams:
+        web_search: true
+
+webSearch:
+  jinaApiKey: '${JINA_API_KEY}'  # Your Jina API key
+  serperApiKey: '${SERPER_API_KEY}'
