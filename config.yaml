@@ -50,8 +50,11 @@ endpoints:
       summaryModel: 'current_model'
       forcePrompt: false
       iconURL: https://cdn-icons-png.flaticon.com/512/13819/13819669.png
-      addParams:
-        web_search: true
+
+fileConfig:
+  endpoints:
+    Adapter:
+      nativeFileSupport: true
 
 webSearch:
   jinaApiKey: '${JINA_API_KEY}'  # Your Jina API key
